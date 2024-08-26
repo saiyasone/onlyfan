@@ -80,14 +80,14 @@ const client = new ApolloClient({
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   // <React.StrictMode>
-    <Provider store={store}>
-      <ApolloProvider client={client}>
-        <ThemeProvider>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
-        </ThemeProvider>
-      </ApolloProvider>
-    </Provider>
+  <Provider store={store}>
+    <ApolloProvider client={client}>
+      <ThemeProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ThemeProvider>
+    </ApolloProvider>
+  </Provider>,
   // </React.StrictMode>,
 );
