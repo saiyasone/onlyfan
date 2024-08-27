@@ -57,17 +57,10 @@ const useFetchSharedSubFolderAndFile = (parentId, user) => {
         }
 
         const folderData = queryData?.filter(
-          (data) =>
-            data.folderId &&
-            data.folderId._id &&
-            data.fileId &&
-            !data.fileId?._id,
+          (data) => data.folderId && data.folderId._id,
         );
         const fileData = queryData?.filter(
-          (data) =>
-            !data.folderId._id &&
-            data.fileId._id &&
-            data.fileId?.status === "active",
+          (data) => data.fileId?._id && data.fileId?.status === "active",
         );
 
         const result = {
